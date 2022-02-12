@@ -10,6 +10,8 @@ Every section contains my own notes
 
 Insert certificate here when completed
 
+
+Add here also JUNIT course into this repo
 ## Progress/Curriculum
 
 
@@ -29,7 +31,7 @@ Insert certificate here when completed
 	- We can solve this using mocks
 - <img src="mock.PNG" alt="alt text" width="300"/>
 - Junit does not proviode mocking ability :(
-	- In Java world, most popilarars are JMockit, EASYMOCK and Mockito
+	- In Java world, most popular are JMockit, EASYMOCK and Mockito
 		- Mockito by far the most popular at the writing time
 - Mockito needs at least Java 8 version
 - <img src="class_diagram.png" alt="alt text" width="300"/>
@@ -38,3 +40,15 @@ Insert certificate here when completed
 - ``new BookingService(paymentService, roomService, bookingDAO, mailSender)``
 	- We want to mock out dependencies form this service
 		- Basic way to do this is using mock``this.paymentService = mock(PaymentService.class);``
+- By default mockito uses nice mocks
+	- returns values makes sense
+	- Nice mocks default values:
+		1. empty list
+		2. null Object
+		3. 0 / false primitives
+- We can specify return type for specific input or any all input
+- `when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonList(new Room("Room 1", 2)));`
+	- When() something happens then -> do something
+		- Chaining when then
+	- This changes default behavior from empty list to single element list
+	- Now when getAvailableRooms() is called return list with new Room 
