@@ -35,8 +35,8 @@ Add here also JUNIT course into this repo
 		- Mockito by far the most popular at the writing time
 - Mockito needs at least Java 8 version
 - <img src="class_diagram.png" alt="alt text" width="300"/>
-	- Don't mock methods from BookService
-		- Test all mehthods from BookService
+- Don't mock methods from BookService
+	- Test all mehthods from BookService
 - ``new BookingService(paymentService, roomService, bookingDAO, mailSender)``
 	- We want to mock out dependencies form this service
 		- Basic way to do this is using mock``this.paymentService = mock(PaymentService.class);``
@@ -52,3 +52,4 @@ Add here also JUNIT course into this repo
 		- Chaining when then
 	- This changes default behavior from empty list to single element list
 	- Now when getAvailableRooms() is called return list with new Room 
+- Returning value first time, different value when calling second time
