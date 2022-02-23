@@ -60,11 +60,22 @@ Add here also JUNIT course into this repo
 				() -> 	assertEquals(expectedFirstCall, actualFirst),
 				() -> 	assertEquals(expectedSecondCall, actualSecond)
 				);`
-- Testing exception throwing `BookingRequest bookingRequest = new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, false);		
+- Testing exception throwing 
+
+`BookingRequest bookingRequest = new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, false);		
 		when(this.roomServiceMock.findAvailableRoomId(bookingRequest))
 		.thenThrow(BusinessException.class);`
 	
-		`Executable executable = () -> bookingService.makeBooking(bookingRequest);
+		Executable executable = () -> bookingService.makeBooking(bookingRequest);
 		
 		//Then
-		assertThrows(BusinessException.class, executable);`
+		assertThrows(BusinessException.class, executable);	
+
+- any() any kind of input
+- <img src="mockitoGoldenArgumentRules.PNG" alt="alt text" width="300"/>
+
+## PowerMockito(todo)
+todo argumentCaptor
+[todo argumentCaptor](https://www.google.com/search?client=firefox-b-d&q=argument++captor)
+
+
