@@ -52,7 +52,7 @@ Add here also JUNIT course into this repo
 		- Chaining when then
 	- This changes default behavior from empty list to single element list
 	- Now when getAvailableRooms() is called return list with new Room 
-- Returning value first time, different value when calling second time
+- ReturningW value first time, different value when calling second time
 - We can chain multiple returns 1nd call and 2nd call
 `.thenReturn(Collections.singletonList(new Room("Room 1", 5))) 	// First time called should return one room
 .thenReturn(Collections.emptyList());							// Second time called should return empty`
