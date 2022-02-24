@@ -1,18 +1,19 @@
 package com.mockitotutorial.happyhotel.booking;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyDouble;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
-class Test06Matchers {
+class Test07VerifyingBehaviour {
 
   private BookingService bookingService; // Main Service to test dont mock
 
@@ -35,18 +36,35 @@ class Test06Matchers {
   }
 
   @Test
-  void shoud_NotCompleteBooking_When_PriceTooHigh() {
+  void should_InvokePayment_When_Prepaid() {
 
     // Given
     BookingRequest bookingRequest =
         new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, true);
-    when(this.paymentServiceMock.pay(any(), anyDouble())).thenThrow(BusinessException.class);
-    // any() any kind of input
-    // When
-    Executable executable = () -> bookingService.makeBooking(bookingRequest);
 
+    // When
+
+    bookingService.makeBooking(bookingRequest);
     // Then
-    assertThrows(BusinessException.class, executable);
+    verify(paymentServiceMock, times(1)).pay(bookingRequest, 400.0);
+    verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
+
   }
 
+
+  @Test
+  void should_NotInvokePayment_WhenNotPrepaid() {
+
+    // Given
+    BookingRequest bookingRequest =
+        new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, false);
+
+
+    // When
+
+    bookingService.makeBooking(bookingRequest);
+
+    // Then
+    verify(paymentServiceMock, never()).pay(any(), anyDouble());
+  }
 }
