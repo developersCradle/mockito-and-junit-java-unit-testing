@@ -16,7 +16,7 @@ Add here also JUNIT course into this repo
 
 
 - [x] Section 01 - Section 1: First things first
-- [ ] Section 02 - Section 2: Mockito 3 Basics
+- [x] Section 02 - Section 2: Mockito 3 Basics
 - [ ] Section 03 - Section 3: More Advanced Concepts
 - [ ] Section 04 - Section 4: Additional Videos
 - [ ] Section 05 - Section 5: Want to Learn More?
@@ -78,6 +78,18 @@ Add here also JUNIT course into this repo
 	- Verify pay() is called from paymentServiceMock with these (bookingRequest, 400.0) arguments
 	- verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
 	
+- Spies partial mocks
+	- mock = dummy object with no real logic
+	- spy = real object with real 
+
+- Defining "behaviour" for for spies, is other way around than for mocks
+- <img src="spy.PNG" alt="alt text" width="300"/>
+- Spy is partial mock, uses code from actual class
+
+- void methods doeas not fork with when then pattern
+`when(this.mailSenderMock.sendBookingConfirmation(any())).thenThrow(BusinessException.class);`
+	- We need doThrSow
+-If want execption from void method use doThrow.when pattern
 
 ## PowerMockito(todo)
 todo argumentCaptor
