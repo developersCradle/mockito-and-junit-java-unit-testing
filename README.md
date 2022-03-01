@@ -11,7 +11,7 @@ Every section contains my own notes
 Insert certificate here when completed
 
 
-Add here also JUNIT course into this repo
+Add here also JUNIT course into this repository
 ## Progress/Curriculum
 
 
@@ -30,13 +30,13 @@ Add here also JUNIT course into this repo
 - This could fail if website is unavailable
 	- We can solve this using mocks
 - <img src="mock.PNG" alt="alt text" width="300"/>
-- Junit does not proviode mocking ability :(
+- Junit does not provide mocking ability :(
 	- In Java world, most popular are JMockit, EASYMOCK and Mockito
 		- Mockito by far the most popular at the writing time
 - Mockito needs at least Java 8 version
 - <img src="class_diagram.png" alt="alt text" width="300"/>
 - Don't mock methods from BookService
-	- Test all mehthods from BookService
+	- Test all methods from BookService
 - ``new BookingService(paymentService, roomService, bookingDAO, mailSender)``
 	- We want to mock out dependencies form this service
 		- Basic way to do this is using mock``this.paymentService = mock(PaymentService.class);``
@@ -86,13 +86,20 @@ Add here also JUNIT course into this repo
 - <img src="spy.PNG" alt="alt text" width="300"/>
 - Spy is partial mock, uses code from actual class
 
-- void methods doeas not fork with when then pattern
+- void methods does not fork with when then pattern
 `when(this.mailSenderMock.sendBookingConfirmation(any())).thenThrow(BusinessException.class);`
 	- We need doThrSow
--If want execption from void method use doThrow.when pattern
+- If want exception from void method use doThrow.when pattern
+- Argument captor allows us to capture arguments passed to methods
+- `verify(paymentServiceMock, times(1)).pay(eq(bookingRequest), doubleCaptor.capture());
+double capturedArgument = doubleCaptor.getValue();`
+    - Capturing argument which was passed to Pay() method
+
 
 ## PowerMockito(todo)
-todo argumentCaptor
-[todo argumentCaptor](https://www.google.com/search?client=firefox-b-d&q=argument++captor)
+
+
+- [todo argumentCaptor](https://www.google.com/search?client=firefox-b-d&q=argument++captor)
+- [link1](https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
 
 
