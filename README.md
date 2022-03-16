@@ -74,9 +74,9 @@ Add here also JUNIT course into this repo
 - any() any kind of input
 - <img src="mockitoGoldenArgumentRules.PNG" alt="alt text" width="300"/>
 
--`verify(paymentServiceMock).pay(bookingRequest, 400.0);`
-	- Verify pay() is called from paymentServiceMock with these (bookingRequest, 400.0) arguments
-	- verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
+* `verify(paymentServiceMock).pay(bookingRequest, 400.0);`
+* Verify pay() is called from paymentServiceMock with these (bookingRequest, 400.0) arguments
+* verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
 	
 
 ## PowerMockito(todo)
