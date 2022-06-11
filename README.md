@@ -95,6 +95,10 @@ Add here also JUNIT course into this repository
 double capturedArgument = doubleCaptor.getValue();`
     - Capturing argument which was passed to Pay() method
 
+- Old way declaring mocks`this.paymentServiceMock = mock(PaymentService.class);`
+- New and recommended way is using annotations @Mock replaces upper declaration
+
+- To match names in given when pattern, we can use BDD 
 
 ## PowerMockito(todo)
 
