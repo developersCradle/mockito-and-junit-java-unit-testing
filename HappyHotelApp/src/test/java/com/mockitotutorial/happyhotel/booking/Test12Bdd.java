@@ -38,7 +38,7 @@ class Test12Bdd{
 	public void should_CountAvailablePlaces_When_OneRoomAvailable() throws Exception {
 		
 		// given
-		when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonList(new Room("Room 1", 5)));
+		given(this.roomServiceMock.getAvailableRooms()).willReturn(Collections.singletonList(new Room("Room 1", 5)));
 		int expected = 5;
 		
 		// when
@@ -56,12 +56,10 @@ class Test12Bdd{
 	    // Given
 	    BookingRequest bookingRequest =
 	        new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, true);
-
 	    // When
-
 	    bookingService.makeBooking(bookingRequest);
 	    // Then
-	    verify(paymentServiceMock, times(1)).pay(bookingRequest, 400.0);
+	    then(paymentServiceMock).should(times(1)).pay(bookingRequest, 400.0);
 	    verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
 
 	  }
