@@ -133,15 +133,82 @@ when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonL
 given(this.roomServiceMock.getAvailableRooms()).willReturn(Collections.singletonList(new Room("Room 1", 5)));`
 ``` 
 
+---
+
 ```
 verify(paymentServiceMock, times(1)).pay(bookingRequest, 400.0);
 ``` 
+
 - Changes to
 
 ```
 then(paymentServiceMock).should(times(1)).pay(bookingRequest, 400.0);`
 ```
 
+- **Strict stubbing**
+- Using annotation in Mockito turns on feature called **Strict stubbing**`@ExtendWith(MockitoExtension.class)`
+
+<img src="stubbing.PNG" alt="alt text" width="300"/>
+
+- Stubbing is defining behaviour of your classes
+
+``` 
+when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //unnecessary stubbing
+```
+
+- If this is defined in test and not actually called -> exeption is throw since **strict stubbing** expects it to be called 
+	- Nice feature, forces to keep test neat and clean
+- to counter this Mockito allows use of `lenient()`
+```
+lenient().when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //unnecessary stubbing works with lenient()
+```
+- Should not be using `lenient()` in first place, since clean tests are more wanted!
+
+- Mocking static methods is still experimental in Mockito, should use Example **PowerMock**
+-To use mocking static methods, needs to enable **experimental**(at the time of 2020) feature in Mockito
+```
+	<dependency>
+		<groupId>org.mockito</groupId>
+		<artifactId>mockito-core
+		</artifactId>
+		<version>3.5.13</version>
+		<scope>test</scope>
+	</dependency>
+```
+To
+```
+	<dependency>
+		<groupId>org.mockito</groupId>
+		<artifactId>mockito-inline</artifactId>
+		<version>3.5.13</version>
+		<scope>test</scope>
+	</dependency>
+```
+- Mocking static method
+```
+	  @Test
+	  void should_calculateCorrectPrize() {
+		  
+		  try(MockedStatic<CurrencyConverter> mockedConverter = mockStatic(CurrencyConverter.class)) {
+
+	    // Given
+	    BookingRequest bookingRequest =
+	        new BookingRequest("1", LocalDate.of(2020, 01, 01), LocalDate.of(2020, 01, 05), 2, false);
+	    
+	    double expected = 400.0;
+	    
+	    mockedConverter.when(() -> CurrencyConverter.toEuro(anyDouble())).thenReturn(400.0);
+	    
+	    // When
+	    double actual = bookingService.calculatePrice(bookingRequest);
+	    
+	    // Then
+	    assertEquals(expected, actual);
+		  }
+	  }
+}
+```
+- Following is kinda stupid to test. testing always returning 400, by using static mocks
 ## PowerMockito(todo)
 
 
