@@ -17,9 +17,9 @@ Add here also JUNIT course into this repository
 
 - [x] Section 01 - Section 1: First things first
 - [x] Section 02 - Section 2: Mockito 3 Basics
-- [ ] Section 03 - Section 3: More Advanced Concepts
-- [ ] Section 04 - Section 4: Additional Videos
-- [ ] Section 05 - Section 5: Want to Learn More?
+- [x] Section 03 - Section 3: More Advanced Concepts
+- [x] Section 04 - Section 4: Additional Videos
+- [x] Section 05 - Section 5: Want to Learn More?
 
 
 
@@ -148,7 +148,7 @@ then(paymentServiceMock).should(times(1)).pay(bookingRequest, 400.0);`
 - **Strict stubbing**
 - Using annotation in Mockito turns on feature called **Strict stubbing**`@ExtendWith(MockitoExtension.class)`
 
-<img src="stubbing.PNG" alt="alt text" width="300"/>
+<img src="stubbing.PNG" alt="alt text" width="500"/>
 
 - Stubbing is defining behaviour of your classes
 
@@ -209,10 +209,62 @@ To
 }
 ```
 - Following is kinda stupid to test. testing always returning 400, by using static mocks
-## PowerMockito(todo)
+
+- Currently we should male our static Mocks more intelligent
+	- At the moment if we change change `CurrencyConverter` test will always pass since mock is tied to `.toEuro()` call
+	- Mockito provides this using **Answer**, they are advanced concepts in mockito
+- Previous test would change into following
+```
+	@Test
+	void should_CalculateCorrectPrice() {
+		try (MockedStatic<CurrencyConverter> mockedConverter = mockStatic(
+				CurrencyConverter.class)) {
+			// given
+			BookingRequest bookingRequest = new BookingRequest("1", LocalDate.of(2020, 01, 01),
+					LocalDate.of(2020, 01, 05), 2, false);
+			double expected = 400.0 * 0.8;
+			mockedConverter.when(() -> CurrencyConverter.toEuro(anyDouble()))
+					.thenAnswer(inv -> (double) inv.getArgument(0) * 0.8);
+
+			// when
+			double actual = bookingService.calculatePriceEuro(bookingRequest);
+
+			// then
+			assertEquals(expected, actual);
+		}
+
+	}
+- At the time of this recording(2020) Mockito is able to mock **final** methods, using experimental features. Using `mockito-inline` in POM
+```
+
+- We can use this in normal and static methods a like`thenAnswer(inv -> (double) inv.getArgument(0) * 0.8);` 
+
+- What Mockitso says about private method mocking
+
+<img src="mockitoPrivate.PNG" alt="alt text" width="500"/>
+
+- Private is ment to **not** to call by external code 
+	- Why don't test public method which in case calls private methdo, does not make sense.
+	- If u feel that u need to mock private method -> something is **wrong** with class design
+
+<img src="summary.PNG" alt="alt text" width="500"/>
 
 
-- [todo argumentCaptor](https://www.google.com/search?client=firefox-b-d&q=argument++captor)
-- [link1](https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
+## PowerMockito
+
+- In old days PowerMockito was used for this reasons
+
+<img src="powerMock.PNG" alt="alt text" width="500"/>
+
+- Nowdays Mockito can 
+
+<img src="latestMockito.PNG" alt="alt text" width="500"/>
+
+- jUnit5 does not support PowerMock, need use workarounds :(
+		- PowerMock does not update too often, u should not depends to external libraries
+
+- Todo when use springBoot (SpringBoot integration) 
+
+- [AdditinalInfoLink] (https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
 
 
