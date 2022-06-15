@@ -2,16 +2,15 @@
 
 ![Mockito](pic.jpg)
 
-All course material from Mockito: Next-Level Java Unit Testing by Adrian Więch
-
-Every section contains my own notes
+All course material from Mockito: Next-Level Java Unit Testing by Adrian Więch.
+Contains my own notes
 
 [The Course at Udemy](https://www.udemy.com/course/mockito3/)   
 
-Insert certificate here when completed
+<img src="certificate.jpg" alt="alt text" width="600"/>
 
+(Todo) Add here also JUNIT course into this repository
 
-Add here also JUNIT course into this repository
 ## Progress/Curriculum
 
 
@@ -265,6 +264,6 @@ To
 
 - Todo when use springBoot (SpringBoot integration) 
 
-- [AdditinalInfoLink] (https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
+- [AdditinalInfoLink](https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
 
 
