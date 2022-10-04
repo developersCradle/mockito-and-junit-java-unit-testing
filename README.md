@@ -98,11 +98,15 @@ BookingRequest bookingRequest = new BookingRequest("1", LocalDate.of(2020, 01, 0
 	- spy = real object with real 
 
 - Defining "behaviour" for for spies, is other way around than for mocks
+
 <img src="spy.PNG" alt="alt text" width="300"/>
+
 - Spy is partial mock, uses code from actual class
 - void methods does not fork with when then pattern
-`when(this.mailSenderMock.sendBookingConfirmation(any())).thenThrow(BusinessException.class);`
-	- We need doThrSow
+```
+when(this.mailSenderMock.sendBookingConfirmation(any())).thenThrow(BusinessException.class);
+```
+- We need doThrSow
 - If want exception from void method use doThrow.when pattern
 - Argument captor allows us to capture arguments passed to methods
  
@@ -132,7 +136,7 @@ when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonL
 given(this.roomServiceMock.getAvailableRooms()).willReturn(Collections.singletonList(new Room("Room 1", 5)));`
 ``` 
 
----
+<hr>
 
 ```
 verify(paymentServiceMock, times(1)).pay(bookingRequest, 400.0);
@@ -164,7 +168,7 @@ lenient().when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //un
 - Should not be using `lenient()` in first place, since clean tests are more wanted!
 
 - Mocking static methods is still experimental in Mockito, should use Example **PowerMock**
--To use mocking static methods, needs to enable **experimental**(at the time of 2020) feature in Mockito
+- To use mocking static methods, needs to enable **experimental**(at the time of 2020) feature in Mockito
 ```
 	<dependency>
 		<groupId>org.mockito</groupId>
@@ -174,7 +178,9 @@ lenient().when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //un
 		<scope>test</scope>
 	</dependency>
 ```
+
 To
+
 ```
 	<dependency>
 		<groupId>org.mockito</groupId>
@@ -233,8 +239,9 @@ To
 		}
 
 	}
-- At the time of this recording(2020) Mockito is able to mock **final** methods, using experimental features. Using `mockito-inline` in POM
 ```
+
+- At the time of this recording(2020) Mockito is able to mock **final** methods, using experimental features. Using `mockito-inline` in POM
 
 - We can use this in normal and static methods a like`thenAnswer(inv -> (double) inv.getArgument(0) * 0.8);` 
 
@@ -246,18 +253,18 @@ To
 	- Why don't test public method which in case calls private methdo, does not make sense.
 	- If u feel that u need to mock private method -> something is **wrong** with class design
 
-<img src="summary.PNG" alt="alt text" width="500"/>
+<img src="summary.PNG" alt="alt text" width="400"/>
 
 
 ## PowerMockito
 
 - In old days PowerMockito was used for this reasons
 
-<img src="powerMock.PNG" alt="alt text" width="500"/>
+<img src="powerMock.PNG" alt="alt text" width="400"/>
 
 - Nowdays Mockito can 
 
-<img src="latestMockito.PNG" alt="alt text" width="500"/>
+<img src="latestMockito.PNG" alt="alt text" width="400"/>
 
 - jUnit5 does not support PowerMock, need use workarounds :(
 		- PowerMock does not update too often, u should not depends to external libraries
