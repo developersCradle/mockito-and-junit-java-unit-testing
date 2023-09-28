@@ -7,7 +7,7 @@ Contains my own notes
 
 [The Course at Udemy](https://www.udemy.com/course/mockito3/)   
 
-<img src="certificate.jpg" alt="alt text" width="600"/>
+<img id="certificate" src="certificate.jpg" alt="alt text" width="600"/>
 
 (Todo) Add here also JUNIT course into this repository
 
