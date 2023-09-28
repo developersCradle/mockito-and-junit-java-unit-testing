@@ -7,9 +7,15 @@ Contains my own notes
 
 [The Course at Udemy](https://www.udemy.com/course/mockito3/)   
 
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
 <img id="certificate" src="certificate.jpg" alt="alt text" width="600"/>
 
-(Todo) Add here also JUNIT course into this repository
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+(Todo) Add here also JUnit course into this repository
 
 ## Progress/Curriculum
 
@@ -31,36 +37,36 @@ Contains my own notes
 
 <img src="mock.PNG" alt="alt text" width="300"/>
 
-- Junit does not provide mocking ability :(
-	- In Java world, most popular are JMockit, EASYMOCK and Mockito
-		- Mockito by far the most popular at the writing time
+- JUnit does not provide mocking ability :(
+	- In Java world, most popular are **JMockit**, **EASYMOCK** and **Mockito** by far the most popular at the writing time
 - Mockito needs at least Java 8 version
 
 <img src="class_diagram.png" alt="alt text" width="400"/>
 
-- Don't mock methods from BookService
-	- Test all methods from BookService
+- Don't mock methods from `BookService`
+	- Test all methods from `BookService`
 - ``new BookingService(paymentService, roomService, bookingDAO, mailSender)``
 	- We want to mock out dependencies form this service
 		- Basic way to do this is using mock
 		``this.paymentService = mock(PaymentService.class);``
-- By default mockito uses **nice mocks**
+- By default Mockito uses **nice mocks**
 	- returns values makes sense
 	- Nice mocks default values:
-		1. empty list
-		2. null Object
-		3. 0 / false primitives
+		- Empty list
+		- Null Object
+		- 0 / false primitives
 - We can specify return type for specific input or any all input
+
 ```
 when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonList(new Room("Room 1", 2)));
 ```
 
-- When() something happens then -> do something
+- When() something happens then → do something
 	- Chaining when then
 		- This changes default behavior from empty list to single element list
-		- Now when getAvailableRooms() is called return list with new Room 
-- ReturningW value first time, different value when calling second time
-- We can chain multiple returns 1nd call and 2nd call
+		- Now when `getAvailableRooms()` is called return list with new Room 
+- Returning value first time, different value when calling second time
+- We can chain multiple returns 1:nd call and 2nd call
 
 ```
 .thenReturn(Collections.singletonList(new Room("Room 1", 5))) 	// First time called should return one room
@@ -68,11 +74,13 @@ when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonL
 ```
 
 - And assert it with following
+
 ```		assertAll(
 				() -> 	assertEquals(expectedFirstCall, actualFirst),
 				() -> 	assertEquals(expectedSecondCall, actualSecond)
 				);
 ```
+
 - Testing exception throwing 
 
 ```
@@ -86,28 +94,30 @@ BookingRequest bookingRequest = new BookingRequest("1", LocalDate.of(2020, 01, 0
 		assertThrows(BusinessException.class, executable);	
 ```
 
-- any() any kind of input
+- `any()` any kind of input
+
 <img src="mockitoGoldenArgumentRules.PNG" alt="alt text" width="300"/>
 
 * `verify(paymentServiceMock).pay(bookingRequest, 400.0);`
-* Verify `pay()` is called from paymentServiceMock with these (bookingRequest, 400.0) arguments
-* verifyNoMoreInteractions(paymentServiceMock); // Check if paymentServiceMock was called once
+* Verify `pay()` is called from `paymentServiceMock` with these `(bookingRequest, 400.0)` arguments
+* `verifyNoMoreInteractions(paymentServiceMock);` // Check if `paymentServiceMock` was called once
 	
-- Spies partial mocks
-	- mock = dummy object with no real logic
+- Spies partial mocks = dummy object with no real logic
 	- spy = real object with real 
 
-- Defining "behaviour" for for spies, is other way around than for mocks
+- Defining "behavior" for spies, is a other way around than for mocks
 
 <img src="spy.PNG" alt="alt text" width="300"/>
 
 - Spy is partial mock, uses code from actual class
 - void methods does not fork with when then pattern
+
 ```
 when(this.mailSenderMock.sendBookingConfirmation(any())).thenThrow(BusinessException.class);
 ```
-- We need doThrSow
-- If want exception from void method use doThrow.when pattern
+
+- We need `doThrSow`
+- If you want exception from void method use `doThrow.when` pattern
 - Argument captor allows us to capture arguments passed to methods
  
 ```
@@ -118,13 +128,13 @@ double capturedArgument = doubleCaptor.getValue();
 - Capturing argument which was passed to Pay() method
 
 - Old way declaring mocks`this.paymentServiceMock = mock(PaymentService.class);`
-- New and recommended way is using annotations @Mock replaces upper declaration
+- New and recommended way is using annotations `@Mock` replaces upper declaration
 
 - To match names in given when pattern, we can use BDD. Just different naming pattern
 
 <img src="tddNaming.PNG" alt="alt text" width="300"/>
 
-- when and then  changes to given willReturn
+- When and then changes to given `willReturn`
 
 ```
 when(this.roomServiceMock.getAvailableRooms()).thenReturn(Collections.singletonList(new Room("Room 1", 5)));
@@ -153,22 +163,25 @@ then(paymentServiceMock).should(times(1)).pay(bookingRequest, 400.0);`
 
 <img src="stubbing.PNG" alt="alt text" width="500"/>
 
-- Stubbing is defining behaviour of your classes
+- Stubbing is defining behavior of your classes
 
 ``` 
 when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //unnecessary stubbing
 ```
 
-- If this is defined in test and not actually called -> exeption is throw since **strict stubbing** expects it to be called 
+- If this is defined in test and not actually called → exception is throw since **strict stubbing** expects it to be called 
 	- Nice feature, forces to keep test neat and clean
-- to counter this Mockito allows use of `lenient()`
+- to counter this **Mockito** allows use of `lenient()`
+
 ```
 lenient().when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1"); //unnecessary stubbing works with lenient()
 ```
+
 - Should not be using `lenient()` in first place, since clean tests are more wanted!
 
 - Mocking static methods is still experimental in Mockito, should use Example **PowerMock**
 - To use mocking static methods, needs to enable **experimental**(at the time of 2020) feature in Mockito
+
 ```
 	<dependency>
 		<groupId>org.mockito</groupId>
@@ -189,7 +202,9 @@ To
 		<scope>test</scope>
 	</dependency>
 ```
+
 - Mocking static method
+
 ```
 	  @Test
 	  void should_calculateCorrectPrize() {
@@ -212,13 +227,16 @@ To
 		  }
 	  }
 }
-```
-- Following is kinda stupid to test. testing always returning 400, by using static mocks
 
-- Currently we should male our static Mocks more intelligent
-	- At the moment if we change change `CurrencyConverter` test will always pass since mock is tied to `.toEuro()` call
+```
+
+- Following is kinda stupid to test. Testing always returning 400, by using static mocks
+
+- Currently, we should male our static Mocks more intelligent
+	- At the moment if we change `CurrencyConverter` test will always pass since mock is tied to `.toEuro()` call
 	- Mockito provides this using **Answer**, they are advanced concepts in mockito
 - Previous test would change into following
+
 ```
 	@Test
 	void should_CalculateCorrectPrice() {
@@ -249,25 +267,25 @@ To
 
 <img src="mockitoPrivate.PNG" alt="alt text" width="500"/>
 
-- Private is ment to **not** to call by external code 
-	- Why don't test public method which in case calls private methdo, does not make sense.
-	- If u feel that u need to mock private method -> something is **wrong** with class design
+- Private is ment to **not** call by external code 
+	- Why don't test public method which in case calls private methdod, does not make sense.
+	- If u feel that u need to mock private method → something is **wrong** with class design
 
 <img src="summary.PNG" alt="alt text" width="400"/>
 
 
 ## PowerMockito
 
-- In old days PowerMockito was used for this reasons
+- In old days **PowerMockito** was used for this reasons
 
 <img src="powerMock.PNG" alt="alt text" width="400"/>
 
-- Nowdays Mockito can 
+- Nowadays **Mockito** can 
 
 <img src="latestMockito.PNG" alt="alt text" width="400"/>
 
-- jUnit5 does not support PowerMock, need use workarounds :(
-		- PowerMock does not update too often, u should not depends to external libraries
+- **jUnit5** does not support PowerMock, need to use workarounds 😢
+		- PowerMock does **not** update too often, u should not depends on external libraries
 
 - Todo when use springBoot (SpringBoot integration) 
 
