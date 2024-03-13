@@ -2,31 +2,29 @@
 
 ![Mockito](pic.jpg)
 
-All course material from Mockito: Next-Level Java Unit Testing by Adrian Więch.
-Contains my own notes
+All course material from Mockito: Next-Level Java Unit Testing by **Adrian Więch**.
+
+Contains my own notes to better learning experience. 
 
 [The Course at Udemy](https://www.udemy.com/course/mockito3/)   
 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
-<img id="certificate" src="certificate.jpg" alt="alt text" width="600"/>
-
+<img id="certificate_mockito" src="certificate_mockito.jpg" alt="pic of mockito  certificate" width="600"/>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-(Todo) Add here also JUnit course into this repository
+- Todo when use springBoot (SpringBoot integration) 
+- Todo make captions for every chapter
 
 ## Progress/Curriculum
-
 
 - [x] Section 01 - Section 1: First things first
 - [x] Section 02 - Section 2: Mockito 3 Basics
 - [x] Section 03 - Section 3: More Advanced Concepts
 - [x] Section 04 - Section 4: Additional Videos
 - [x] Section 05 - Section 5: Want to Learn More?
-
-
 
 # Notes from every chapter
 
@@ -37,11 +35,11 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 <img src="mock.PNG" alt="alt text" width="300"/>
 
-- JUnit does not provide mocking ability :(
+- Junit does not provide mocking ability :(
 	- In Java world, most popular are **JMockit**, **EASYMOCK** and **Mockito** by far the most popular at the writing time
 - Mockito needs at least Java 8 version
 
-<img src="class_diagram.png" alt="alt text" width="400"/>
+<img src="class_diagram.png" alt="alt text" width="500"/>
 
 - Don't mock methods from `BookService`
 	- Test all methods from `BookService`
@@ -263,12 +261,12 @@ To
 
 - We can use this in normal and static methods a like`thenAnswer(inv -> (double) inv.getArgument(0) * 0.8);` 
 
-- What Mockitso says about private method mocking
+- What Mockito says about private method mocking
 
 <img src="mockitoPrivate.PNG" alt="alt text" width="500"/>
 
 - Private is ment to **not** call by external code 
-	- Why don't test public method which in case calls private methdod, does not make sense.
+	- Why don't test public method which in case calls private method, does not make sense.
 	- If u feel that u need to mock private method → something is **wrong** with class design
 
 <img src="summary.PNG" alt="alt text" width="400"/>
@@ -284,11 +282,33 @@ To
 
 <img src="latestMockito.PNG" alt="alt text" width="400"/>
 
-- **jUnit5** does not support PowerMock, need to use workarounds 😢
-		- PowerMock does **not** update too often, u should not depends on external libraries
+- **Junit5** does not support PowerMock, need to use workarounds 😢
+	- PowerMock does **not** update too often, you should not depends on external libraries
 
-- Todo when use springBoot (SpringBoot integration) 
+- [AdditionalInfoLink](https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
 
-- [AdditinalInfoLink](https://blog.jayway.com/2013/03/05/beyond-mocking-with-powermock/)
+# Learn Java Unit Testing with Junit & Mockito in 30 Steps
 
+![JunitAndMockito](pic2.JPG)
 
+All course material from Learn Java Unit Testing with Junit & Mockito in 30 Steps by **Ranga Karanam** from legendary **in28minutes**.
+
+Contains my own notes to better learning experience with some course content. 
+
+[The Course at Udemy](https://www.udemy.com/course/mockito-tutorial-with-junit-examples/)   
+
+[Homepage of Maker](https://www.in28minutes.com/)
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+<img id="certificate_junit_and_mockito" src="certificate_junitAndMockito.jpg" alt="pic of mockito and junit certificate" width="600"/>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+- Todo make captions for every chapter
+
+## Progress/Curriculum
+
+- [ ] Section 01 - 
+- [ ] Section 02 - 
+- [ ] Section 03 - 
