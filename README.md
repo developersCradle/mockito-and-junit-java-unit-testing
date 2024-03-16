@@ -299,9 +299,11 @@ Contains my own notes to better learning experience with some course content.
 
 [Homepage of Maker](https://www.in28minutes.com/)
 
+[Github of project](https://github.com/in28minutes/MockitoTutorialForBeginners)
+
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
-<img id="certificate_junit_and_mockito" src="certificate_junitAndMockito.jpg" alt="pic of mockito and junit certificate" width="600"/>
+<img id="certificate_junit_and_mockito?trk=public_profile_see-credential" src="certificate_junitAndMockito.jpg" alt="pic of mockito and junit certificate" width="600"/>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -309,6 +311,12 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 ## Progress/Curriculum
 
-- [ ] Section 01 - 
-- [ ] Section 02 - 
-- [ ] Section 03 - 
+- [x] Section 01 - Introduction ✔️
+- [ ] Section 02 - Unit Testing with Junit 
+- [ ] Section 03 - Getting Ready for Mockito 
+- [ ] Section 04 - Need For Mockito
+- [ ] Section 05 - Mockito Basics
+- [ ] Section 06 -  Mockito Advanced
+- [ ] Section 07 - Powermock with Mockito
+
+
