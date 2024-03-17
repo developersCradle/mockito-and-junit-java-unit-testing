@@ -154,3 +154,56 @@ public class StringHelper {
 ```
 
 # Step 11 : Parameterized Tests
+
+- Making many test asserts with ease.
+
+- Parametrized test needs:
+	1. `@RunWith(Parameterized.class)` annotation with class which is going to make Parameterized tests
+	2. `@Parameters` for method which is going to make all the work and parameters.
+	3. Constructor and local variables
+
+
+```
+public class StringHelperParameterizedTest {
+
+	// AACD => CD ACD => CD CDEF=>CDEF CDAA => CDAA
+
+	StringHelper helper = new StringHelper();
+	
+	private String input;
+	private String expectedOutput;
+	
+	public StringHelperParameterizedTest(String input, String expectedOutput) {
+		this.input = input;
+		this.expectedOutput = expectedOutput;
+	}
+
+	@Parameters
+	public static Collection<String[]> testConditions() {
+		String expectedOutputs[][] = { 
+				{ "AACD", "CD" }, 
+				{ "ACD", "CD" } };
+		return Arrays.asList(expectedOutputs);
+	}
+
+	@Test
+	public void testTruncateAInFirst2Positions() {
+		assertEquals(expectedOutput, 
+				helper.truncateAInFirst2Positions(input));
+	}
+}
+```
+
+# Step 12 : Organize JUnits into Suites
+
+- To run specific tests, **not all**! We wan't create test suite.
+
+<img src="suitestClass.JPG" alt="alt text" width="500"/>
+
+- Use case would be, if we have memory tests or performance test. We would not want to run them frequently
+
+- Suite class, needs to annotated with `@RunWith(Suite.class)`
+
+# How to remember things for long time
+
+- Take notes and review them often
