@@ -278,3 +278,5 @@ stub(mockTodoService.retrieveTodos("Parameter")).return("value");
     - `mock()`
     - `when()`
 - You can read trough [Mockito Docs](https://javadoc.io/static/org.mockito/mockito-core/5.11.0/org/mockito/Mockito.html)
+
+
