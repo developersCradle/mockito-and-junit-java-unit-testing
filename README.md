@@ -331,7 +331,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [X] [Section 02](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2002%20JunitAndMockito) - Unit Testing with Junit ✔️
 - [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2003%20Getting%20Ready%20for%20Mockito) - Getting Ready for Mockito ✔️
 - [X] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2004%20Need%20For%20Mockito) - Need For Mockito ✔️
-- [ ] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2005%20Mockito%20Basics) - Mockito Basics
+- [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2005%20Mockito%20Basics) - Mockito Basics ✔️
 - [ ] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2006%20Mockito%20Advanced) -  Mockito Advanced
 - [ ] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2007%20Powermock%20with%20Mockito) - Powermock with Mockito
 
