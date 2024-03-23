@@ -24,6 +24,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - Todo when use springBoot (SpringBoot integration) 
 - Todo make captions for every chapter
+- Todo put here Cucumber/Selenium course
 
 ## Progress/Curriculum
 
@@ -323,8 +324,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-- Todo make captions for every chapter
-
 ## Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2001%20JunitAndMockito) - Introduction ✔️
@@ -332,7 +331,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2003%20Getting%20Ready%20for%20Mockito) - Getting Ready for Mockito ✔️
 - [X] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2004%20Need%20For%20Mockito) - Need For Mockito ✔️
 - [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2005%20Mockito%20Basics) - Mockito Basics ✔️
-- [ ] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2006%20Mockito%20Advanced) -  Mockito Advanced
+- [x] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2006%20Mockito%20Advanced) -  Mockito Advanced ✔️
 - [ ] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2007%20Powermock%20with%20Mockito) - Powermock with Mockito
 
 

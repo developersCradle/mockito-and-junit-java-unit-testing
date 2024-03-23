@@ -10,7 +10,7 @@ public class TodoBusinessImpl {
 
 	//TodoBusinessImpl SUT
 	//TodoService Dependency
-	TodoBusinessImpl(TodoService todoService) {
+	public TodoBusinessImpl(TodoService todoService) {
 		this.todoService = todoService;
 	}
 
