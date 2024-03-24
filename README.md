@@ -23,12 +23,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 - Todo when use springBoot (SpringBoot integration) 
-- Todo make captions for every chapter
+- Todo make captions for every chapter, for mockito course
 - Todo put here Cucumber/Selenium course
+- Todo check typos from 24seven junit
 
 ## Progress/Curriculum
 
-- [x] Section 01 - Section 1: First things first
+- [x] Section 01 - Section 1: First things first ✔️
 - [x] Section 02 - Section 2: Mockito 3 Basics
 - [x] Section 03 - Section 3: More Advanced Concepts
 - [x] Section 04 - Section 4: Additional Videos
@@ -332,6 +333,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [X] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2004%20Need%20For%20Mockito) - Need For Mockito ✔️
 - [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2005%20Mockito%20Basics) - Mockito Basics ✔️
 - [x] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2006%20Mockito%20Advanced) -  Mockito Advanced ✔️
-- [ ] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2007%20Powermock%20with%20Mockito) - Powermock with Mockito
+- [x] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2007%20Powermock%20with%20Mockito) - PowerMock with Mockito ✔️
 
 

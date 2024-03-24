@@ -7,7 +7,7 @@ PowerMock with Mockito
 
 # Step 15 : Setting up PowerMock and SystemUnderTest
 
-- POM for powermock
+- POM for PowerMock
 
 ```
 <dependency>
@@ -52,7 +52,7 @@ public class PowerMockitoMockingStaticMethodTest {
 
 ```
 
-PowerMockito.verifyStatic(); //Get powermock ready for checking
+PowerMockito.verifyStatic(); //Get PowerMock ready for checking
 UtilityClass.staticMethod(1 + 2 + 3);
 
 ```
@@ -115,3 +115,60 @@ public class PowerMockitoMockingStaticMethodTest {
 ```
 
 # Step 17 : Mocking a Constructor
+
+
+- When overriding **constructor** with **PowerMock**, in this case we need provide class for prepare.
+
+```
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({ SystemUnderTest.class /*To be able to mock the Constructor, we need to add in the Class that creates the new object*/})
+```
+
+- Mocking constructor example
+
+```
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({ SystemUnderTest.class /*To be able to mock the Constructor, we need to add in the Class that creates the new object*/})
+public class PowerMockitoMockingConstructorTest {
+
+	private static final int SOME_DUMMY_SIZE = 100;
+
+	@Mock
+	Dependency dependencyMock;
+
+	@InjectMocks
+	SystemUnderTest systemUnderTest;
+
+	@Test
+	public void powerMockito_MockingAConstructor() throws Exception {
+
+		ArrayList<String> mockList = mock(ArrayList.class);
+
+		when(mockList.size()).thenReturn(SOME_DUMMY_SIZE);
+
+		PowerMockito.whenNew(ArrayList.class).withAnyArguments().thenReturn(
+				mockList);
+
+		int size = systemUnderTest.methodUsingAnArrayListConstructor();
+
+		assertEquals(SOME_DUMMY_SIZE, size);
+	}
+} 
+```
+
+- In general if you need mock out **private**, **static** or **constructors** you are doing something what you should not do. Avoid doing this!. Only if you are inside legacy code or something like this, ok more or less feasible
+
+# Step 18 : Writing Good Unit Tests
+
+1. Readability. Naming should be example. **nameOfMethod** + **nameOfScenario**.
+	- Test should be contain only what is testing. Example, Think of product, it can have many fields, but what we are concerned about in test is prize. 
+	- BDD format. **Given When Then**
+
+2. Test should when there is real problem
+
+
+- Extra resources, but these two here are good ones to start!.
+
+[First Principle](https://pragprog.com/magazines/2012-01/unit-tests-are-first)
+[XUnitPatterns](http://xunitpatterns.com)
+[GoodTest](https://github.com/mockito/mockito/wiki/How-to-write-good-tests)
