@@ -37,7 +37,6 @@ class SpyTest {
 		assertEquals(-1, listSpy.size());
 		assertEquals("Ranga", listSpy.get(0));
 
-		// @Spy Annotation
 	}
 
 }
