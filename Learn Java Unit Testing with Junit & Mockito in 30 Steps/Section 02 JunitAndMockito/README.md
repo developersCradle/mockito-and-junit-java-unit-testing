@@ -1,7 +1,7 @@
 
 ## Section 02 Unit Testing with Junit
 
-Unit Testing with Junit lecture
+Unit Testing with Junit lecture.
 
 # What I Learned
 
@@ -9,25 +9,24 @@ Unit Testing with Junit lecture
 
 <img src="oldWayTesting.JPG" alt="alt text" width="400"/>
 
-- Old way to test this would be
-	- Push code to production
-	- Navigate to page where it taking place and test it thought UI
-	- Here **Unit Testing** comes in
+- Old way to test this would be.
+	- Push code to production.
+	- Navigate to page where code is affected and test it thought UI.
+		- Nowadays we would write **Unit Tests** to test this.
 
 1. This can be called **Unit**. Unit also can be:
-	- Method()
-	- Set of methods()
-	- Set of classes
-- **Usually it means** you are testing one method or group of methods 
+	- Method().
+	- Set of methods().
+	- Set of classes.
+- **Usually it means** you are testing one method or group of methods. 
 
 # JUnit Step 2 : Setting up your first JUnit
 
 <img src="archetype.JPG" alt="alt text" width="400"/>
 
-1. **Archetypes** are **Mavens** way to create sample projects
+1. **Archetypes** are **Mavens** way to create sample projects.
 
-
-- We are writing unit test for this StringHelper class
+- Here we are writing unit test for this **StringHelper** class.
 
 ```
 public class StringHelper {
@@ -59,17 +58,17 @@ public class StringHelper {
 }
 ```
 
-- Unit test should not be in `src/main ` folder, when application is builder it will go to complied source.
+- Unit test should not be in `src/main ` folder, when application is builded it will go to complied source.
 
 # Step 03 : First Successful JUnit. Green Bar and assertEquals
 
-- Test will assert stuff. Asserts have usually `actual` and `expected` value. `assertEquals("ABC", "ABCD");`
+- Test will assert stuff. Asserts have usually `actual` and `expected` value. `assertEquals("ABC", "ABCD");`.
 
 - Remember **expected** is first and second one **actual**.
 
 # Step 04 : Refactoring Your First JUnit Test
 
-- Writing second test
+- Writing second test.
 
 ```
 @Test
@@ -87,15 +86,23 @@ public class StringHelper {
 
 <img src="ThereIsAlotOfAsserts.JPG" alt="alt text" width="500"/>
 
-- If you name test method names correctly you don't necessary need condition name. You can see clearly which test fails.
+- There is a lot of test methods in library to use 
+
+<br>
 
 <img src="clearlySeeError.JPG" alt="alt text" width="500"/>
 
+<br>
+
+<img src="namingTestCorrectly.JPG" alt="alt text" width="600"/>
+
+1. If you name test method names correctly you **don't** necessary need condition name(You can use other version of **Assert** to display error messages, but if name of method is correctly written this is **often unnecessary**). You can see clearly which test fails.
+
  # Step 06 : @Before @After and Step 07 : @BeforeClass @AfterClass
 
-- If you need to use **sys.out**, its recommended use logger.
+- If you need to use **System.out.println()** for printing, its recommended use  logger instead.
 
-- After test is finished, close connection example or clean up
+- `@After `After test is finished. We can close connection or clean up processes.
 
 ```
 	@After
@@ -104,13 +111,13 @@ public class StringHelper {
 	}
 ```
 
-- Class with @BeforeClass should be **static**
+- Class with @BeforeClass should be **static**.
 
 
 # Step 08 : Comparing Arrays in JUnit Tests
 
-- Comparing arrays with `assertArrayEquals(expected, numbers);`
-	- Check same values!
+- Comparing arrays with `assertArrayEquals(expected, numbers);`.
+	- Checks are they same values!
 
 ```
 @Test
@@ -124,8 +131,10 @@ public class StringHelper {
 
 # Step 09 : Testing Exceptions in JUnit Tests
 
-- Testing exception with **expected**
-	- Old way is to use try-catch
+- Testing exception with **expected**.
+	- Old way is to use try-catch.
+
+- Newer way is use **expected** inside method name.
 
 ```
 	@Test(expected=NullPointerException.class)
@@ -137,9 +146,9 @@ public class StringHelper {
 
 # Step 10 : Testing Performance in JUnit Tests
 
-- Testing time would wan't to be executed in **specific time**
-	- Using **timeout** annotation `@Test(timeout=100)`
-- We can use this to test performance
+- Testing with time, we would want to it be executed in **specific time**.
+	- Using **timeout** annotation `@Test(timeout=100)`.
+- We can use this to test performance.
 
 ```
 	@Test(timeout=100)
@@ -155,15 +164,18 @@ public class StringHelper {
 
 # Step 11 : Parameterized Tests
 
-- Making many test asserts with ease.
+- Parameterized Tests help to make many test asserts with ease.
 
 - Parametrized test needs:
-	1. `@RunWith(Parameterized.class)` annotation with class which is going to make Parameterized tests
-	2. `@Parameters` for method which is going to make all the work and parameters.
-	3. Constructor and local variables
+1. `@RunWith(Parameterized.class)` annotation with class which is going to make Parameterized tests.
+2. `@Parameters` for method which is going to make all the work and parameters.
+3. Constructor and local variables.
+
+- Example below
 
 
 ```
+@RunWith(Parameterized.class)
 public class StringHelperParameterizedTest {
 
 	// AACD => CD ACD => CD CDEF=>CDEF CDAA => CDAA
@@ -196,13 +208,13 @@ public class StringHelperParameterizedTest {
 
 # Step 12 : Organize JUnits into Suites
 
-- To run specific tests, **not all**! We wan't create test suite.
+- To run specific tests and  **not all**! We wan't create test suite.
 
-<img src="suitestClass.JPG" alt="alt text" width="500"/>
+<img src="suitestClass.JPG" alt="alt text" width="600"/>
 
-- Use case would be, if we have memory tests or performance test. We would not want to run them frequently
+- Use case would be, if we have memory tests or performance test. We would not want to run them frequently.
 
-- Suite class, needs to annotated with `@RunWith(Suite.class)`
+- **Suite class**, needs to annotated with `@RunWith(Suite.class)`.
 
 # How to remember things for long time
 

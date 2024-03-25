@@ -1,14 +1,14 @@
 
 ## Section 03 Getting Ready for Mockito
 
-Getting Ready for Mockito
+Getting Ready for Mockito.
 
 # What I Learned
 
 # Mockito Step 01 : Setting up a Maven Project
 
-- Adding maven to our project
-    - Steps can be found in `.md` files
+- Adding maven to our project. Adding it to **POM**.
+    - Steps can be found in `.md` files.
     
 ```
 <dependencies>

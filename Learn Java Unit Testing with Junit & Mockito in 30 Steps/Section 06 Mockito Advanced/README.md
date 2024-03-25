@@ -1,17 +1,17 @@
 
 ## Section 06  Mockito Advanced
 
- Mockito Advanced
+ Mockito Advanced.
 
 # What I Learned
 
 # Step 09: Hamcrest Matchers
 
-- These make test more readable
-    - **hamcrest-library** has many other asserts
+- These make test more readable.
+    - **hamcrest-library** has many other asserts.
 
 
-- **Hamcrest** assert POM at the time
+- **Hamcrest** assert POM at the time.
 
 ```
 <dependency>
@@ -22,7 +22,7 @@
 </dependency>  
 ```
 
-- Different to use **hamscrest**
+- Different to use **hamscrest**.
 
 ```
 @Test
@@ -49,15 +49,15 @@
 
 # Step 10 : Mockito Annotations - @Mock, @InjectMocks, @RunWith, @Captor..
 
-- Another way to **mock** object is using **@annotations**
+- Another way to **mock** object is using **@annotations**.
 
 <img src="mockitoRunner.PNG" alt="alt text" width="500"/>
 
-1. To use these **annotation** we need add tell to run with **runner**
+1. To use these **annotation** we need add tell class to run with **runner**.
 
-- With annotations following will test, `TodoService mockTodoService = mock(TodoService.class);` will be written as `@Mock TodoService mockTodoService;`
+- With annotations following will line, `TodoService mockTodoService = mock(TodoService.class);` will be written as `@Mock TodoService mockTodoService;`.
 
-- `@Mock` will **mock** objects which it will find. `@InjectMocks` annotation will be used also here.
+- `@Mock` will **mock** objects which it will find. `@InjectMocks` annotation will be used also here to inject mocked dependencies.
 
 ```
 	@Test
@@ -92,7 +92,7 @@
 	
 ```
 
-- Will be after mocking annotations
+- Will be after mocking annotations.
 
 ```
 // Mock annotation will make this behind scenes
@@ -141,7 +141,7 @@
 ```
 
 
-- Another good annotation is **@InjectMocks**
+- Another good annotation is **@InjectMocks**.
     - Mockito **will figure out** needed decencies to construct object.  
     - Example of this. Old way to use this would be `TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(mockTodoService);` and with annotation and new approach will be
     
@@ -150,29 +150,28 @@
 TodoBusinessImpl todoBusinessImpl; // Object is mocked and needed injections are passed inside 
 ```
 	
-- Its preferred tp use **@annotations** if possible
+- Its preferred to use **@annotations** if possible
 
 <img src="argumentCaptor.PNG" alt="alt text" width="300"/>
 
-- These annotations will make test more readable, so you can focus for **business logic**
+- These annotations will make test more readable, so you can focus for **business logic**.
 
 # Step 11 : Mockito Junit Rule
 
 - `@RunWith(MockitoJUnitRunner.class)` Will make all the annotation actions when needed 
-    - if we wan't to use two runners, for example also Spring Boot runner. We need to use **Junit rules**.
+    - If we wan't to use two runners, for example also Spring Boot runner. We need to use **Junit rules**.
 
-
-- To make rule we write
+- To make rule we write.
 
 ```	
 @Rule
 public MockitoRule mockitoRule = MockitoJUnit.rule();
 ```
 
-- And then we can remove this `@RunWith(MockitoJUnitRunner.class)`
+- And then we can remove this old one `@RunWith(MockitoJUnitRunner.class)`
 
-- You can have only **one** runner, and more than one **Rule**  
-    - Junit is **moving towards** to rules than runners, coz they are more flexible
+- You can have only **one** runner, but **Rule** can be many.
+    - Junit is **moving towards** to **rules** than **runners**, coz they are more flexible.
 
 # Step 12 : Real world Mockito Example with Spring
 
@@ -180,12 +179,11 @@ public MockitoRule mockitoRule = MockitoJUnit.rule();
 
 <img src="testImplementationProject.PNG" alt="alt text" width="600"/>
 
-1. We would wan't to test this one.
-1.1 in this case we would wan't to mock `productDO` and `ClientDO`
+1. We would want to test this one.
+**1.1** in this case we would want to mock `productDO` and `ClientDO`.
 2. In real life scenario data and business layer is separated.
 
-
-- Test example from **real app**
+- Test example from **real app**.
 
 ```
 	
@@ -308,37 +306,8 @@ public class ClientBOMockitoTest {
 
 # Step 13 : Mockito Spy
 
+- Using spy rather than mock.
 
-```
-
-    @Test
-	public void creatingASpyOnArrayList() {
-		List<String> listSpy = spy(ArrayList.class);
-		listSpy.add("Ranga");
-		listSpy.add("in28Minutes");
-
-		verify(listSpy).add("Ranga");
-		verify(listSpy).add("in28Minutes");
-
-		assertEquals(2, listSpy.size());
-		assertEquals("Ranga", listSpy.get(0));
-	}
-
-	@Test
-	public void creatingASpyOnArrayList_overridingSpecificMethods() {
-		List<String> listSpy = spy(ArrayList.class);
-		listSpy.add("Ranga");
-		listSpy.add("in28Minutes");
-
-		stub(listSpy.size()).toReturn(-1); // Stub is just BDD Style
-
-		assertEquals(-1, listSpy.size());
-		assertEquals("Ranga", listSpy.get(0));
-
-		// @Spy Annotation
-	}
-
-```
 
 <img src="mocking.PNG" alt="alt text" width="600"/>
 
@@ -348,7 +317,7 @@ public class ClientBOMockitoTest {
         - It will create almost real **ArrayList**
 
 
-- You can write something like this with real logic, from ArrayList. After adding you would get `assertEquals(2, listSpy.size());` to be true, take a look below.
+- You can write something like this with real logic, from **ArrayList**. After adding you would get `assertEquals(2, listSpy.size());` to be **true**, take a look below.
 
 ```
 	@Test
@@ -390,11 +359,44 @@ public class ClientBOMockitoTest {
 
 <img src="bond.jpeg" alt="alt text" width="400"/>
 
+- Examples using spy from real application
+
+```
+
+    @Test
+	public void creatingASpyOnArrayList() {
+		List<String> listSpy = spy(ArrayList.class);
+		listSpy.add("Ranga");
+		listSpy.add("in28Minutes");
+
+		verify(listSpy).add("Ranga");
+		verify(listSpy).add("in28Minutes");
+
+		assertEquals(2, listSpy.size());
+		assertEquals("Ranga", listSpy.get(0));
+	}
+
+	@Test
+	public void creatingASpyOnArrayList_overridingSpecificMethods() {
+		List<String> listSpy = spy(ArrayList.class);
+		listSpy.add("Ranga");
+		listSpy.add("in28Minutes");
+
+		stub(listSpy.size()).toReturn(-1); // Stub is just BDD Style
+
+		assertEquals(-1, listSpy.size());
+		assertEquals("Ranga", listSpy.get(0));
+
+		// @Spy Annotation
+	}
+
+```
+
 # Step 14 : Theory : Why does Mockito not allow stubbing final & private methods?
 
 - You should only test **public** interfaces of class! 
 
 - Why Mockito doesn't mock private methods?
     - Since mockito **promotes** Good Design! It does not support this!
-    - [Source](https://github.com/mockito/mockito/wiki/Mockito-And-Private-Methods)
+    	- [Source](https://github.com/mockito/mockito/wiki/Mockito-And-Private-Methods)
     - These are disabled by designs. You could use **Power Mock**, but this class wrong designed if you need this.
