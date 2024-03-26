@@ -7,12 +7,8 @@ Introduction
 
 # Notes from every chapter
 
-<img src="NeedForMockito.PNG" alt="alt text" width="300"/>
 
-- This could fail if website is unavailable
-	- We can solve this using mocks
 
-<img src="mock.PNG" alt="alt text" width="300"/>
 
 - Junit does not provide mocking ability :(
 	- In Java world, most popular are **JMockit**, **EASYMOCK** and **Mockito** by far the most popular at the writing time

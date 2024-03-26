@@ -23,16 +23,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 - Todo when use springBoot (SpringBoot integration) 
-- Todo make captions for every chapter, for mockito course
 - Todo put here Cucumber/Selenium course
 
 ## Progress/Curriculum
 
-- [x] Section 01 - Section 1: First things first ✔️
-- [x] Section 02 - Section 2: Mockito 3 Basics
-- [x] Section 03 - Section 3: More Advanced Concepts
-- [x] Section 04 - Section 4: Additional Videos
-- [x] Section 05 - Section 5: Want to Learn More?
+- [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%201%20First%20things%20first) - Section 1: First things first ✔️
+- [x] [Section 02](#) - Section 2: Mockito 3 Basics
+- [x] [Section 03](#) - Section 3: More Advanced Concepts
+- [x] [Section 04](#) - Section 4: Additional Videos
+- [x] [Section 05](#) - Section 5: Want to Learn More?
 
 
 # Learn Java Unit Testing with Junit & Mockito in 30 Steps
@@ -66,12 +65,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ## Progress/Curriculum
 
-- [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2001%20JunitAndMockito) - Introduction ✔️
-- [X] [Section 02](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2002%20JunitAndMockito) - Unit Testing with Junit ✔️
-- [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2003%20Getting%20Ready%20for%20Mockito) - Getting Ready for Mockito ✔️
-- [X] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2004%20Need%20For%20Mockito) - Need For Mockito ✔️
-- [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2005%20Mockito%20Basics) - Mockito Basics ✔️
-- [x] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2006%20Mockito%20Advanced) -  Mockito Advanced ✔️
-- [x] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Section%2007%20Powermock%20with%20Mockito) - PowerMock with Mockito ✔️
+- [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2001%20JunitAndMockito) - Introduction ✔️
+- [X] [Section 02](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2002%20JunitAndMockito) - Unit Testing with Junit ✔️
+- [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2003%20Getting%20Ready%20for%20Mockito) - Getting Ready for Mockito ✔️
+- [X] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2004%20Need%20For%20Mockito) - Need For Mockito ✔️
+- [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2005%20Mockito%20Basics) - Mockito Basics ✔️
+- [x] [Section 06](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2006%20Mockito%20Advanced) -  Mockito Advanced ✔️
+- [x] [Section 07](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Learn%20Java%20Unit%20Testing%20with%20Junit%20%26%20Mockito%20in%2030%20Steps/Section%2007%20Powermock%20with%20Mockito) - PowerMock with Mockito ✔️
 
 
