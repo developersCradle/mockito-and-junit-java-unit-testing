@@ -49,3 +49,34 @@ Introduction
 - To fix this we use following. **Mocks**
     - We will mock
     - We will learn to test behavior of these mocks
+
+# Mocking Frameworks
+
+<img src="popularMockingLibraryes.PNG" alt="alt text" width="500"/>
+
+- In Java world, most popular are **JMockit**, **EASYMOCK** and **Mockito** by far the most popular at the writing time
+    - Junit does not provide mocking ability :(
+
+<img src="whenWritingTests.PNG" alt="alt text" width="500"/>
+
+- In JVM world mockito was popular framework when writing tests.
+    - Mockito is **popular!**
+
+
+# What should be mocked?
+
+<img src="weWantMockTheseOut.PNG" alt="alt text" width="400"/>
+
+1. We want mock these out of **BookingService**
+
+- Class under test you can see below 
+
+<img src="class_diagram.png" alt="alt text" width="500"/>
+
+<br>
+
+<img src="mockingTheseOnes.PNG" alt="alt text" width="500"/>
+
+1. Mocking methods in **Service** class and testing them is kinda useless. 
+    - Don't mock methods from `BookService`
+	    - We want to test all methods from `BookService` and mock only decencies.

@@ -25,7 +25,6 @@ class Test02DefaultRetrunValues {
 		this.mailSenderMock = mock(MailSender.class);
 
 		this.bookingService = new BookingService(paymentServiceMock, roomServiceMock, bookingDAOMock, mailSenderMock);
-
 		
 		System.out.println("List returned " + roomServiceMock.getAvailableRooms());
 		System.out.println("Object returned " + roomServiceMock.findAvailableRoomId(null));

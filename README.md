@@ -28,7 +28,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ## Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%201%20First%20things%20first) - Section 1: First things first ✔️
-- [x] [Section 02](#) - Section 2: Mockito 3 Basics
+- [x] [Section 02](#) - Section 2: Mockito 4 Basics
 - [x] [Section 03](#) - Section 3: More Advanced Concepts
 - [x] [Section 04](#) - Section 4: Additional Videos
 - [x] [Section 05](#) - Section 5: Want to Learn More?
