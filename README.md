@@ -8,7 +8,6 @@ Contains my own notes to better learning experience.
 
 [The Course at Udemy](https://www.udemy.com/course/mockito3/)   
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
 This repository is made with **Eclipse**, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
@@ -22,16 +21,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-- Todo when use springBoot (SpringBoot integration) 
 - Todo put here Cucumber/Selenium course
 
 ## Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%201%20First%20things%20first) - Section 1: First things first ✔️
-- [x] [Section 02](#) - Section 2: Mockito 4 Basics
-- [x] [Section 03](#) - Section 3: More Advanced Concepts
-- [x] [Section 04](#) - Section 4: Additional Videos
-- [x] [Section 05](#) - Section 5: Want to Learn More?
+- [x] [Section 02](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%202%20Mockito%203%20Basics) - Section 2: Mockito 4 Basics✔️
+- [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%203%20More%20Advanced%20Concepts) - Section 3: More Advanced Concepts ✔️
+- [x] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%204%20Additional%20Videos) - Section 4: Additional Videos ✔️
+- [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%205%20Want%20to%20Learn%20More) - Section 5: Want to Learn More? ✔️
 
 
 # Learn Java Unit Testing with Junit & Mockito in 30 Steps
