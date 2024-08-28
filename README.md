@@ -21,8 +21,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-- Todo put here Cucumber/Selenium course
-
 ## Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%201%20First%20things%20first) - Section 1: First things first ✔️
@@ -30,6 +28,39 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 03](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%203%20More%20Advanced%20Concepts) - Section 3: More Advanced Concepts ✔️
 - [x] [Section 04](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%204%20Additional%20Videos) - Section 4: Additional Videos ✔️
 - [x] [Section 05](https://github.com/developersCradle/mockito-and-junit-java-unit-testing/tree/main/Mockito%20Next-Level%20Java%20Unit%20Testing/Section%205%20Want%20to%20Learn%20More) - Section 5: Want to Learn More? ✔️
+
+
+
+# Selenium WebDriver with Java - Basics to Advanced + Frameworks
+
+![Selenium WebDriver with Java](selenium.PNG)
+
+All course material from Selenium WebDriver with Java by **Rahul Shetty**.
+
+Contains my own notes to better learning experience with some course content. 
+
+[The Course at Udemy](https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/)
+
+[Homepage of Maker](https://rahulshettyacademy.com/)
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+This repository is made with **Eclipse**, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+<br>
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<!-- <img id="certificate_junit_and_mockito?trk=public_profile_see-credential" src="certificate_junitAndMockito.jpg" alt="pic of mockito and junit certificate" width="600"/> -->
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+## Progress/Curriculum
+
+- [ ] [Section 01](#) - 
 
 
 # Learn Java Unit Testing with Junit & Mockito in 30 Steps
