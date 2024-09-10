@@ -62,6 +62,36 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] [Section 01](#) - 
 
+# Learn Cucumber BDD with Java - MasterClass Selenium Framework
+
+![Cucumber BDD with Java - MasterClass Selenium Framework](cucumber.PNG)
+
+All course material from Selenium WebDriver with Java by **Rahul Shetty**.
+
+Contains my own notes to better learning experience with some course content. 
+
+[The Course at Udemy](https://www.udemy.com/course/cucumber-tutorial/)
+
+[Homepage of Maker](https://rahulshettyacademy.com/)
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+This repository is made with **Eclipse**, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+<br>
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<!-- <img id="certificate_junit_and_mockito?trk=public_profile_see-credential" src="certificate_junitAndMockito.jpg" alt="pic of mockito and junit certificate" width="600"/> -->
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+## Progress/Curriculum
+
+- [ ] [Section 01](#) - 
 
 # Learn Java Unit Testing with Junit & Mockito in 30 Steps
 
